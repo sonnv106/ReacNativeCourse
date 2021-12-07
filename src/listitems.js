@@ -3,13 +3,13 @@ import {Text, View, StyleSheet,Pressable } from "react-native";
 const ListItem = ({items, remove}) =>(
     items.map((item, i)=>(
         <Pressable
+            key = {item}        
             style = {{width: "100%"}}
             onPress = { () => remove(i)}
-
         >
             <View 
                 style = {styles.listItem}
-                key = {item}
+               
             >
                 <Text>{item}</Text>
             </View>   

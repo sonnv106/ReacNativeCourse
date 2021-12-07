@@ -3,7 +3,7 @@ import {Text, View, StyleSheet} from "react-native";
 import Nav from './src/nav';
 import Generate from './src/generate'
 import ListItem from "./src/listitems";
-
+import Inputs from "./src/inputs";
 const App = () =>{
   const [hello, setHello] = useState(true);
   const [random, setRandom] = useState([20,25]);
@@ -43,6 +43,7 @@ const App = () =>{
       </View> */}
       <Generate add = {()=>onAddRandom()}/>
       <ListItem items ={random} remove = {(pos)=> onItemRemove(pos)}/>
+      <Inputs/>
     </View>
     
   )
